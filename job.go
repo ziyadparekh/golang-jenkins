@@ -1,9 +1,9 @@
 package gojenkins
 
 type Build struct {
-	Id       string `json:"id"`
-	Number   int    `json:"number"`
-	Url      string `json:"url"`
+	Id     string `json:"id"`
+	Number int    `json:"number"`
+	Url    string `json:"url"`
 
 	FullDisplayName string `json:"fullDisplayName"`
 	Description     string `json:"description"`
@@ -32,4 +32,6 @@ type Job struct {
 	LastSuccessfulBuild   Build `json:"lastSuccessfulBuild"`
 	LastUnstableBuild     Build `json:"lastUnstableBuild"`
 	LastUnsuccessfulBuild Build `json:"lastUnsuccessfulBuild"`
+
+	NextBuildNumber int `json:"nextBuildNumber"`
 }
